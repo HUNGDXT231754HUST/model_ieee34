@@ -1,0 +1,34 @@
+! Substation Transformer
+New Transformer.SubXF Phases=3 Windings=2 Xhl=8
+~ wdg=1 bus=sourcebus conn=Delta kv=69    kva=2500   %r=0.5
+~ wdg=2 bus=800       conn=wye   kv=24.9  kva=2500   %r=0.5
+
+! In-Line Transformer
+New Transformer.XFM1 Phases=3 Windings=2 Xhl=4.08
+~ wdg=1 bus=832       conn=wye   kv=24.9  kva=500   %r=0.95
+~ wdg=2 bus=888       conn=wye   kv=4.16  kva=500   %r=0.95
+
+! Capacitors
+New Capacitor.C844a Bus1=844.1 Phases=1 kVAR=100 kV=14.376
+New Capacitor.C844b Bus1=844.2 Phases=1 kVAR=100 kV=14.376
+New Capacitor.C844c Bus1=844.3 Phases=1 kVAR=100 kV=14.376
+New Capacitor.C848a Bus1=848.1 Phases=1 kVAR=150 kV=14.376
+New Capacitor.C848b Bus1=848.2 Phases=1 kVAR=150 kV=14.376
+New Capacitor.C848c Bus1=848.3 Phases=1 kVAR=150 kV=14.376
+
+! Regulators
+! Regulator 1
+new transformer.reg1a phases=1 windings=2 bank=reg1 buses=(814.1 814r.1) conns='wye wye' kvs="14.376 14.376" kvas="2500 2500" XHL=1
+new regcontrol.creg1a transformer=reg1a winding=2 vreg=122 band=2 ptratio=120 ctprim=100 R=2.7 X=1.6
+new transformer.reg1b phases=1 windings=2 bank=reg1 buses=(814.2 814r.2) conns='wye wye' kvs="14.376 14.376" kvas="2500 2500" XHL=1
+new regcontrol.creg1b transformer=reg1b winding=2 vreg=122 band=2 ptratio=120 ctprim=100 R=2.7 X=1.6
+new transformer.reg1c phases=1 windings=2 bank=reg1 buses=(814.3 814r.3) conns='wye wye' kvs="14.376 14.376" kvas="2500 2500" XHL=1
+new regcontrol.creg1c transformer=reg1c winding=2 vreg=122 band=2 ptratio=120 ctprim=100 R=2.7 X=1.6
+
+! Regulator 2
+new transformer.reg2a phases=1 windings=2 bank=reg2 buses=(852.1 852r.1) conns='wye wye' kvs="14.376 14.376" kvas="2500 2500" XHL=1
+new regcontrol.creg2a transformer=reg2a winding=2 vreg=124 band=2 ptratio=120 ctprim=100 R=2.5 X=1.5
+new transformer.reg2b phases=1 windings=2 bank=reg2 buses=(852.2 852r.2) conns='wye wye' kvs="14.376 14.376" kvas="2500 2500" XHL=1
+new regcontrol.creg2b transformer=reg2b winding=2 vreg=124 band=2 ptratio=120 ctprim=100 R=2.5 X=1.5
+new transformer.reg2c phases=1 windings=2 bank=reg2 buses=(852.3 852r.3) conns='wye wye' kvs="14.376 14.376" kvas="2500 2500" XHL=1
+new regcontrol.creg2c transformer=reg2c winding=2 vreg=124 band=2 ptratio=120 ctprim=100 R=2.5 X=1.5
