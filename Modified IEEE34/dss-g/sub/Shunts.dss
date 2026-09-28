@@ -1,0 +1,4 @@
+New "PVSystem.pv838" phases=1 bus1=838.2 kv=14.376 kVA=100 Pmpp=100
+New "PVSystem.pv856" phases=1 bus1=856.2 kv=14.376 kVA=100 Pmpp=100
+New "PVSystem.pv822" phases=1 bus1=822.1 kv=14.376 kVA=100 Pmpp=100
+New "Storage.bss810" phases=3 bus1=810 kv=24.9 kWrated=500 kWhrated=2000 %reserve=10 %EffCharge=98 %EffDischarge=98

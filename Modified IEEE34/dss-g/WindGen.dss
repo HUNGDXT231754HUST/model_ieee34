@@ -1,0 +1,3 @@
+New "WindGen.wind822" phases=1 bus1=822.1 kv=14.376 kW=100 PF=1 model=1
+New "WindGen.wind826" phases=1 bus1=826.2 kv=14.376 kW=100 PF=1 model=1
+New "WindGen.wind838" phases=1 bus1=838.2 kv=14.376 kW=100 PF=1 model=1

@@ -1,0 +1,6 @@
+New "Capacitor.c844a" bus1=844.1 phases=1 kvar=[ 100] kv=14.376
+New "Capacitor.c844b" bus1=844.2 phases=1 kvar=[ 100] kv=14.376
+New "Capacitor.c844c" bus1=844.3 phases=1 kvar=[ 100] kv=14.376
+New "Capacitor.c848a" bus1=848.1 phases=1 kvar=[ 150] kv=14.376
+New "Capacitor.c848b" bus1=848.2 phases=1 kvar=[ 150] kv=14.376
+New "Capacitor.c848c" bus1=848.3 phases=1 kvar=[ 150] kv=14.376

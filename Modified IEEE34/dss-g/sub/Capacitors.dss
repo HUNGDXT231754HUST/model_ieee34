@@ -1,0 +1,2 @@
+New "Capacitor.scb840" bus1=840 phases=3 kvar=[ 120 120 120 120] kv=24.9 Numsteps=4
+New "Capacitor.scb864" bus1=864 phases=3 kvar=[ 120 120 120 120] kv=24.9 Numsteps=4

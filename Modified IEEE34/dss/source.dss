@@ -1,0 +1,22 @@
+! Substation Transformer
+New Transformer.SubXF Phases=3 Windings=2 Xhl=8
+~ wdg=1 bus=sourcebus conn=Delta kv=69    kva=2500   %r=0.5
+~ wdg=2 bus=800       conn=wye   kv=24.9  kva=2500   %r=0.5
+
+! Distributed Generators (DGs)
+New Generator.DGen848 Phases=3 Bus1=848 kV=24.9 kW=825 PF=1 Model=1
+New Generator.DGen890 Phases=3 Bus1=890 kV=4.16 kW=625 PF=1 Model=1  ! Note: node 890 is at 4.16 kV
+
+! Battery Storage System (BSS)
+! Capacity: 2 MWh, Max Power: 0.5 MW, Min Energy: 0.2 MWh (10% reserve), Efficiency: 98%
+New Storage.BSS810 Phases=3 Bus1=810 kV=24.9 kWrated=500 kWhrated=2000 %reserve=10 %EffCharge=98 %EffDischarge=98
+
+! Photovoltaic (PV)
+New PVSystem.PV822 Phases=1 Bus1=822.1 kV=14.376 kVA=100 Pmpp=100
+New PVSystem.PV856 Phases=1 Bus1=856.2 kV=14.376 kVA=100 Pmpp=100
+New PVSystem.PV838 Phases=1 Bus1=838.2 kV=14.376 kVA=100 Pmpp=100
+
+! Wind Turbines
+New WindGen.Wind822 Phases=1 Bus1=822.1 kV=14.376 kW=100 PF=1 Model=1
+New WindGen.Wind826 Phases=1 Bus1=826.2 kV=14.376 kW=100 PF=1 Model=1
+New WindGen.Wind838 Phases=1 Bus1=838.2 kV=14.376 kW=100 PF=1 Model=1

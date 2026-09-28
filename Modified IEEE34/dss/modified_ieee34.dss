@@ -1,0 +1,16 @@
+! Master file for Modified IEEE 34 Bus
+Clear
+Set DefaultBaseFrequency=60
+
+New object=circuit.ModifiedIEEE34
+~ basekv=69 pu=1.05 angle=30 mvasc3=200000
+
+Redirect line_data.dss
+Redirect comp.dss
+Redirect source.dss
+Redirect loads.dss
+
+Set VoltageBases = "69, 24.9, 14.376, 4.16, 2.4, 0.48"
+CalcVoltageBases
+
+Buscoords "D:\LAB\28092026\Modified IEEE-34\data\XY\Modified_IEEE34_XY.csv"
